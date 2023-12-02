@@ -1,0 +1,5 @@
+[submodule "onnxruntime"]
+	path = onnxruntime
+	url = https://github.com/microsoft/onnxruntime.git
+	branch = 2ac381c55397dffff327cc6efecf6f95a70f90a1
+	shallow = true
