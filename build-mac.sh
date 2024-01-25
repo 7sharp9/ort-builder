@@ -14,7 +14,7 @@ build_arch() {
   --parallel \
   --minimal_build \
   --apple_deploy_target="10.13" \
-  --disable_ml_ops --disable_rtti \
+  --disable_rtti \
   --include_ops_by_config "$ONNX_CONFIG" \
   --enable_reduced_operator_type_support \
   --cmake_extra_defines CMAKE_OSX_ARCHITECTURES="${ARCH}" \
@@ -27,14 +27,11 @@ build_arch() {
   "${BUILD_DIR}/libonnxruntime_graph.a" \
   "${BUILD_DIR}/libonnx_proto.a" \
   "${BUILD_DIR}/libonnxruntime_mlas.a" \
-  "${BUILD_DIR}/libonnx_test_data_proto.a" \
   "${BUILD_DIR}/libonnxruntime_optimizer.a" \
-  "${BUILD_DIR}/libonnx_test_runner_common.a" \
   "${BUILD_DIR}/libonnxruntime_common.a" \
   "${BUILD_DIR}/libonnxruntime_providers.a" \
   "${BUILD_DIR}/libonnxruntime_session.a" \
   "${BUILD_DIR}/libonnxruntime_flatbuffers.a" \
-  "${BUILD_DIR}/libonnxruntime_test_utils.a" \
   "${BUILD_DIR}/libonnxruntime_framework.a" \
   "${BUILD_DIR}/libonnxruntime_util.a" \
   "${BUILD_DIR}/_deps/re2-build/libre2.a" \
